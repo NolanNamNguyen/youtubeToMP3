@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convert YouTube videos to MP3 audio files quickly and easily. Free online YouTube to MP3 converter.">
+    <title>YouTube to MP3 Converter - Download Audio from YouTube</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-gradient"></div>
+    
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="12" fill="url(#gradient)"/>
+                    <path d="M20 12L28 16V24L20 28L12 24V16L20 12Z" fill="white" opacity="0.9"/>
+                    <path d="M18 17V23L24 20L18 17Z" fill="url(#gradient)"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="40" y2="40">
+                            <stop offset="0%" stop-color="#667eea"/>
+                            <stop offset="100%" stop-color="#764ba2"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <h1>YT2MP3</h1>
+            </div>
+            <p class="tagline">Convert YouTube videos to MP3 instantly</p>
+        </header>
+
+        <main class="main-content">
+            <div class="converter-card">
+                <div class="card-header">
+                    <h2>Download YouTube Audio</h2>
+                    <p>Paste your YouTube video link below</p>
+                </div>
+
+                <form id="converterForm" class="converter-form">
+                    <div class="input-group">
+                        <svg class="input-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M9 2C5.13 2 2 5.13 2 9C2 12.87 5.13 16 9 16C10.57 16 12.03 15.43 13.19 14.47L17.73 19L19 17.73L14.47 13.19C15.43 12.03 16 10.57 16 9C16 5.13 12.87 2 9 2ZM9 4C11.76 4 14 6.24 14 9C14 11.76 11.76 14 9 14C6.24 14 4 11.76 4 9C4 6.24 6.24 4 9 4Z" fill="currentColor"/>
+                        </svg>
+                        <input 
+                            type="text" 
+                            id="youtubeUrl" 
+                            placeholder="https://www.youtube.com/watch?v=..." 
+                            required
+                            autocomplete="off"
+                        >
+                    </div>
+
+                    <button type="submit" id="convertBtn" class="convert-btn">
+                        <span class="btn-text">Convert to MP3</span>
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 2L8.59 3.41L13.17 8H2V10H13.17L8.59 14.59L10 16L17 9L10 2Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </form>
+
+                <div id="status" class="status-message"></div>
+                
+                <div id="progress" class="progress-container" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <p class="progress-text">Processing your video...</p>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Convert videos in seconds</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h3>High Quality</h3>
+                    <p>Best audio quality available</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure & Private</h3>
+                    <p>Your data is never stored</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Made with ❤️ for music lovers</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
